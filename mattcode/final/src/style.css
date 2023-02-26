@@ -19,13 +19,14 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
+
   color: rgb(135, 135, 135);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
 }
 
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 
@@ -63,12 +64,12 @@ li::first-letter {
   top: -34px;
 }
 
-.weather.weather-temperature .active {
+.weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
 }
 
-.weather.temperature .active:hover {
+.weather-temperature .active:hover {
   text-decoration: none;
 }
 
