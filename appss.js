@@ -73,6 +73,23 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function toFahrenheit(event) {
+  let temperatureChange = document.querySelector("#temperature");
+  temperatureChange.innerHTML =
+    Math.round(temperatureChange.innerHTML * 9) / 5 + 32;
+}
+
+function toCelcius(event) {
+  let temperatureChange = document.querySelector("#temperature");
+  temperatureChange.innerHTML = Math.round(
+    ((temperatureChange.innerHTML - 32) * 5) / 9
+  );
+}
+let temperatureF = document.querySelector("#fahrenheit-link");
+temperatureF.addEventListener("click", toFahrenheit);
+let temperatureC = document.querySelector("#celsius-link");
+temperatureC.addEventListener("click", toCelcius);
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
